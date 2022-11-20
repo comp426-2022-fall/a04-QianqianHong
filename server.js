@@ -39,15 +39,15 @@ app.get('/app/roll/:sides/', (req, res) => {
 // 7
 app.get('/app/roll/:sides/:dice/', (req, res) => {
 	let sides = parseInt(req.params.sides);
-	let dice = parsetInt(req.params.dice);
+	let dice = parseInt(req.params.dice);
 	res.send(roll(sides, dice, 1));
 });
 
 // 8
 app.get('/app/roll/:sides/:dice/:rolls/', (req, res) => {
 	let sides = parseInt(req.params.sides);
-	let dice = parsetInt(req.params.dice);
-	let rolls = parsetInt(req.params.rolls);
+	let dice = parseInt(req.params.dice);
+	let rolls = parseInt(req.params.rolls);
 	res.send(roll(sides, dice, rolls));
 });
 
